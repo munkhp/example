@@ -18,8 +18,9 @@ return new class extends Migration
             $table->foreignId('website_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->string('title');
             $table->string('description');
-            $table->unique('title');
-            $table->timestamps();
+            $table->unique(['title', 'website_id']);
+            $table->dateTime('created_at');
+            $table->dateTime('updated_at');
         });
     }
 

@@ -18,10 +18,13 @@ class DatabaseSeeder extends Seeder
         DB::table('websites')->insert([
             [
                 'domain' => 'example1.com',
+                'last_sent' => date('Y-m-d H:i:s')
             ], [
                 'domain' => 'example2.com',
+                'last_sent' => date('Y-m-d H:i:s')
             ], [
                 'domain' => 'example3.com',
+                'last_sent' => date('Y-m-d H:i:s')
             ]
         ]);
     }
